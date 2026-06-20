@@ -1,0 +1,25 @@
+Objective: Revamp/Migrate DMC (https://distancembacollege.com/) Website into Modern Stack
+Technology: Next.Js, Supabase(PostgreSQL), Sanity.io
+Dependencies: Vercel, GitHub, required liabraries, claude/chatgpt
+Reference Files: stored at E:\Projects\DMC\docs
+
+Connect Codex/claude code with VS Code
+Objective: My Objective is to Revamp/Migrate DMC (https://distancembacollege.com/) Website into Modern Stack
+Next.Js, Supabase(PostgreSQL), Sanity.io from current WordPress Platform
+
+website will be in Next.Js, we will be using supabase as database and sanity.io as headless cms, where my page and blogs will be stored.
+
+I have made template for the new website (which is suppose to be next.js) these files are stored at E:\Projects\DMC\docs.
+while making the website make sure you follow the given brand guideline (Distance-MBA-College-Brand-Guidelines-FINAL.doc), use home.html as home page template, Logo as (logo-primary.png)
+
+
+
+account creations
+Vercel
+GitHub
+supabase
+sanity.io
+
+make sure you use the same email if for these accounts (prefer website email id for better migration)
+
+

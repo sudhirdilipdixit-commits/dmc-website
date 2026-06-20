@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Website Mockup — Distance MBA College</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Poppins', sans-serif; color: #1F2937; background: #FAF7F0; }
+  .container { width: 1400px; margin: 0 auto; }
+
+  /* Browser chrome to mimic actual web context */
+  .browser {
+    background: #fff;
+    border-radius: 12px 12px 0 0;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 20px 60px rgba(11,31,77,0.12);
+    overflow: hidden;
+  }
+  .browser-bar {
+    background: #F1F5F9;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #E5E7EB;
+  }
+  .dot { width: 12px; height: 12px; border-radius: 50%; background: #CBD5E1; }
+  .dot.r { background: #FCA5A5; }
+  .dot.y { background: #FCD34D; }
+  .dot.g { background: #6EE7B7; }
+  .url {
+    margin-left: 16px;
+    background: #fff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #64748B;
+    border: 1px solid #E2E8F0;
+    flex: 1;
+    max-width: 480px;
+  }
+
+  /* Nav */
+  .nav {
+    background: #FAF7F0;
+    padding: 22px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(203,213,225,0.5);
+  }
+  .nav-logo { display: flex; align-items: center; }
+  .nav-logo-icon { width: 38px; height: 36px; margin-right: 14px; }
+  .nav-logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+  }
+  .nav-logo-text .light { font-weight: 500; color: #0B1F4D; }
+  .nav-logo-text .bold { font-weight: 700; color: #E8930E; }
+  .nav-links { display: flex; align-items: center; font-size: 15px; font-weight: 500; color: #475569; }
+  .nav-links > span { margin-left: 32px; }
+  .nav-phone { color: #0B1F4D !important; font-weight: 600 !important; }
+
+  /* Hero */
+  .hero {
+    padding: 80px 56px 100px;
+    position: relative;
+    background: #FAF7F0;
+  }
+  .hero-eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #E8930E;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: "";
+    width: 28px; height: 2px;
+    background: #E8930E;
+  }
+  .hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    color: #0B1F4D;
+    margin-top: 24px;
+    max-width: 16ch;
+  }
+  .hero h1 .ital {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: #1E3A8A;
+  }
+  .hero p {
+    font-size: 19px;
+    color: #475569;
+    max-width: 56ch;
+    margin-top: 28px;
+    line-height: 1.6;
+  }
+  .hero-actions {
+    display: flex;
+    margin-top: 40px;
+  }
+  .hero-actions .btn { margin-right: 14px; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 16px 28px;
+    border-radius: 8px;
+    line-height: 1;
+  }
+  .btn-primary {
+    background: #E8930E;
+    color: #0B1F4D;
+    box-shadow: 0 4px 12px rgba(232,147,14,0.25);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: #0B1F4D;
+    border: 1.5px solid #0B1F4D;
+  }
+  .hero-stats {
+    margin-top: 64px;
+    display: flex;
+    padding-top: 32px;
+    border-top: 1px solid rgba(203,213,225,0.6);
+  }
+  .hero-stats > div { margin-right: 56px; }
+  .stat-num {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #0B1F4D;
+    letter-spacing: -0.02em;
+  }
+  .stat-num .saffron { color: #E8930E; }
+  .stat-label {
+    font-size: 13px;
+    color: #475569;
+    margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="browser">
+  <div class="browser-bar">
+    <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+    <div class="url">🔒  distancembacollege.com</div>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 100 95">
+        <path d="M 12 72 L 12 40 L 50 10 L 88 40 L 88 72" fill="none" stroke="#0B1F4D" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 5 85 Q 50 102 95 80" fill="none" stroke="#E8930E" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+      <span class="nav-logo-text">
+        <span class="light">Distance </span><span class="bold">MBA</span><span class="light"> College</span>
+      </span>
+    </div>
+    <div class="nav-links">
+      <span>Universities</span>
+      <span>Specialisations</span>
+      <span>Blog</span>
+      <span class="nav-phone">☎ +91 86696 61005</span>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <span class="hero-eyebrow">Honest advice for working professionals</span>
+    <h1>Find the distance MBA that fits the <span class="ital">life you already have.</span></h1>
+    <p>Every UGC-DEB recognised programme in one place. Compare fees, duration, and accreditation honestly. Then talk to a counsellor whose only job is to find the right fit, not close the sale.</p>
+    <div class="hero-actions">
+      <span class="btn btn-primary">Speak to a counsellor  →</span>
+      <span class="btn btn-secondary">Browse universities</span>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num"><span class="saffron">47</span>+</div>
+        <div class="stat-label">Universities listed</div>
+      </div>
+      <div>
+        <div class="stat-num"><span class="saffron">18,000</span>+</div>
+        <div class="stat-label">Professionals advised</div>
+      </div>
+      <div>
+        <div class="stat-num"><span class="saffron">14</span> yrs</div>
+        <div class="stat-label">In distance education</div>
+      </div>
+      <div>
+        <div class="stat-num"><span class="saffron">100%</span></div>
+        <div class="stat-label">UGC-DEB recognised</div>
+      </div>
+    </div>
+  </section>
+</div>
+</div>
+</body>
+</html>

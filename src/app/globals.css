@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy:       #0B1F4D;
+  --navy-2:     #1E3A8A;
+  --saffron:    #E8930E;
+  --saffron-2:  #FBBF24;
+  --saffron-50: #FEF3DC;
+  --cream:      #FAF7F0;
+  --mist:       #F1F5F9;
+  --ink:        #1F2937;
+  --slate:      #475569;
+  --slate-2:    #94A3B8;
+  --hairline:   #CBD5E1;
+  --white:      #FFFFFF;
+  --success:    #10B981;
+  --max:        1180px;
+  --gutter:     clamp(20px, 4vw, 48px);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply font-body text-ink bg-cream;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a {
+    @apply text-navy no-underline;
+  }
+  img {
+    @apply max-w-full block;
+  }
+}
+
+@layer components {
+  .wrap {
+    max-width: var(--max);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  .eyebrow {
+    @apply font-body text-xs font-semibold tracking-[0.18em] uppercase text-saffron inline-flex items-center gap-3;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply w-7 h-0.5 bg-saffron flex-shrink-0;
+  }
+
+  .eyebrow--light {
+    @apply text-saffron-2;
+  }
+  .eyebrow--light::before {
+    @apply bg-saffron-2;
+  }
+
+  .section-marker {
+    @apply font-display text-[13px] font-semibold text-saffron tracking-[0.18em] uppercase min-w-[180px] pt-2 shrink-0;
+  }
+  .section-marker-num {
+    @apply text-slate-400 mr-3.5 font-voice italic font-medium text-base tracking-normal normal-case;
+  }
+
+  .input-base {
+    @apply w-full font-body text-base text-ink px-4 py-3.5 border-[1.5px] border-hairline rounded-lg bg-white transition-all;
+    @apply focus:outline-none focus:border-saffron focus:ring-4 focus:ring-saffron/15;
+  }
+}

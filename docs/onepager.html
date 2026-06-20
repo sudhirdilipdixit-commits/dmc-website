@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>One-Pager Mockup</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Poppins', sans-serif; color: #1F2937; background: #E5E7EB; padding: 30px 0; }
+  /* A4 portrait: 210x297mm = 794x1123 px at 96dpi */
+  .page {
+    width: 794px;
+    min-height: 1123px;
+    margin: 0 auto;
+    background: #FAF7F0;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(11,31,77,0.2);
+    overflow: hidden;
+  }
+  /* Saffron accent bar at top */
+  .accent-bar { height: 8px; background: #E8930E; }
+
+  .header {
+    padding: 40px 50px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(203,213,225,0.6);
+  }
+  .header-logo { display: flex; align-items: center; }
+  .header-logo-icon { width: 44px; height: 42px; margin-right: 14px; }
+  .header-logo-text { font-size: 24px; letter-spacing: -0.01em; }
+  .header-logo-text .light { font-weight: 500; color: #0B1F4D; }
+  .header-logo-text .bold { font-weight: 700; color: #E8930E; }
+  .header-tagline {
+    font-family: 'Lora', serif; font-style: italic;
+    color: #475569; font-size: 14px; text-align: right;
+  }
+
+  .hero-block {
+    padding: 50px 50px 30px;
+  }
+  .hero-eyebrow {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: #E8930E;
+    margin-bottom: 18px;
+  }
+  .hero-h1 {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #0B1F4D;
+    max-width: 14ch;
+  }
+  .hero-h1 .ital {
+    font-family: 'Lora', serif; font-style: italic; font-weight: 500;
+    color: #1E3A8A;
+  }
+  .hero-sub {
+    color: #475569; font-size: 16px;
+    line-height: 1.55; max-width: 60ch;
+    margin-top: 16px;
+  }
+
+  .three-col {
+    display: flex;
+    padding: 0 50px;
+    margin-top: 20px;
+  }
+  .col {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 22px 20px;
+    margin-right: 14px;
+  }
+  .col:last-child { margin-right: 0; }
+  .col-num {
+    font-weight: 700; font-size: 28px;
+    color: #E8930E; letter-spacing: -0.02em;
+  }
+  .col-title {
+    font-weight: 600; font-size: 15px;
+    color: #0B1F4D; margin-top: 10px;
+  }
+  .col-body {
+    font-size: 13px; color: #475569;
+    line-height: 1.5; margin-top: 6px;
+  }
+
+  .compare-block {
+    padding: 30px 50px 0;
+  }
+  .section-title {
+    font-weight: 700; font-size: 22px;
+    color: #0B1F4D; letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+  .section-title .ital {
+    font-family: 'Lora', serif; font-style: italic; font-weight: 500;
+    color: #1E3A8A;
+  }
+  .section-sub {
+    color: #475569; font-size: 13px; margin-bottom: 18px;
+  }
+  .compare-table {
+    width: 100%; border-collapse: collapse;
+    background: #fff;
+    border: 1px solid #E2E8F0; border-radius: 10px; overflow: hidden;
+  }
+  .compare-table th, .compare-table td {
+    padding: 12px 16px;
+    text-align: left; font-size: 13px;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  .compare-table th {
+    background: #0B1F4D; color: #fff;
+    font-weight: 600;
+  }
+  .compare-table td:first-child {
+    color: #64748B; font-weight: 500;
+    background: #FBFAF6;
+  }
+  .compare-table td.val {
+    color: #0B1F4D; font-weight: 600;
+  }
+  .compare-table tr:last-child td { border-bottom: none; }
+
+  .footer-band {
+    background: #0B1F4D;
+    color: #fff;
+    margin-top: 30px;
+    padding: 28px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-band-left { max-width: 60%; }
+  .footer-band-quote {
+    font-family: 'Lora', serif; font-style: italic;
+    font-size: 17px; line-height: 1.4;
+    color: #fff;
+  }
+  .footer-band-quote::before { content: '"'; color: #E8930E; margin-right: 4px; font-size: 1.3em; }
+  .footer-band-attr {
+    font-size: 12px; color: #FBBF24;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    margin-top: 10px; font-weight: 600;
+  }
+  .footer-band-cta {
+    background: #E8930E; color: #0B1F4D;
+    font-weight: 700; font-size: 14px;
+    padding: 14px 22px; border-radius: 8px;
+  }
+
+  .contact-strip {
+    padding: 22px 50px;
+    background: #FAF7F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 4px solid #E8930E;
+  }
+  .contact-row { font-size: 13px; color: #475569; }
+  .contact-row strong { color: #0B1F4D; }
+  .badges {
+    display: flex; align-items: center;
+  }
+  .badge {
+    border: 1px solid #CBD5E1; padding: 4px 10px;
+    border-radius: 4px; font-weight: 600;
+    font-size: 11px; letter-spacing: 0.04em;
+    color: #475569; margin-left: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="accent-bar"></div>
+
+  <div class="header">
+    <div class="header-logo">
+      <svg class="header-logo-icon" viewBox="0 0 100 95">
+        <path d="M 12 72 L 12 40 L 50 10 L 88 40 L 88 72" fill="none" stroke="#0B1F4D" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 5 85 Q 50 102 95 80" fill="none" stroke="#E8930E" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+      <div class="header-logo-text">
+        <span class="light">Distance </span><span class="bold">MBA</span><span class="light"> College</span>
+      </div>
+    </div>
+    <div class="header-tagline">
+      Your Future.<br>One Smart Step Away.
+    </div>
+  </div>
+
+  <div class="hero-block">
+    <div class="hero-eyebrow">— DISTANCE & ONLINE MBA ADVISORY</div>
+    <h1 class="hero-h1">The right MBA, for the <span class="ital">career you want next.</span></h1>
+    <p class="hero-sub">A working professional's guide to choosing a UGC-DEB recognised distance or online MBA. Compare every credible programme in one place, then speak with a counsellor whose job is honesty, not closing the sale.</p>
+  </div>
+
+  <div class="three-col">
+    <div class="col">
+      <div class="col-num">47+</div>
+      <div class="col-title">Universities listed</div>
+      <div class="col-body">Every UGC-DEB recognised distance and online MBA in India, in one comparable view.</div>
+    </div>
+    <div class="col">
+      <div class="col-num">18,000+</div>
+      <div class="col-title">Professionals advised</div>
+      <div class="col-body">Working learners across India guided through their MBA decision since 2012.</div>
+    </div>
+    <div class="col">
+      <div class="col-num">Free</div>
+      <div class="col-title">Counselling, always</div>
+      <div class="col-body">Our counsellors are paid by us, not by the universities. No commission means no bias.</div>
+    </div>
+  </div>
+
+  <div class="compare-block">
+    <div class="section-title">Two programmes, <span class="ital">side by side.</span></div>
+    <div class="section-sub">A counsellor walks you through which trade-off makes sense for your career goal.</div>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th style="width: 32%;">Comparing</th>
+          <th>IGNOU</th>
+          <th>Symbiosis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Total fee</td><td class="val">₹37,800</td><td class="val">₹2,15,000</td></tr>
+        <tr><td>Duration</td><td class="val">2.5 years</td><td class="val">2 years</td></tr>
+        <tr><td>Accreditation</td><td class="val">UGC-DEB</td><td class="val">NAAC A++</td></tr>
+        <tr><td>Specialisations</td><td class="val">8 streams</td><td class="val">5 streams</td></tr>
+        <tr><td>Best suited for</td><td class="val">Govt. employees, broad credibility</td><td class="val">Corporate roles, brand recognition</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer-band">
+    <div class="footer-band-left">
+      <div class="footer-band-quote">Talk to us once and you will know exactly which programme is right for you, and why.</div>
+      <div class="footer-band-attr">OUR BRAND PROMISE</div>
+    </div>
+    <div class="footer-band-cta">Call +91 86696 61005 →</div>
+  </div>
+
+  <div class="contact-strip">
+    <div class="contact-row"><strong>distancembacollege.com</strong>  &middot;  info@distancembacollege.com  &middot;  +91 86696 61005</div>
+    <div class="badges">
+      <span class="badge">UGC-DEB</span>
+      <span class="badge">AICTE</span>
+      <span class="badge">NAAC</span>
+      <span class="badge">AIU</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

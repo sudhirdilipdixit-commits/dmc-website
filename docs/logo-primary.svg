@@ -1,0 +1,20 @@
+<svg viewBox="0 0 780 160" xmlns="http://www.w3.org/2000/svg">
+  
+  <!-- ICON GROUP -->
+  <g transform="translate(30, 35)">
+    <path d="M 12 72 L 12 40 L 50 10 L 88 40 L 88 72"
+          fill="none" stroke="#0B1F4D" stroke-width="7"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 5 85 Q 50 102 95 80"
+          fill="none" stroke="#E8930E" stroke-width="6"
+          stroke-linecap="round"/>
+  </g>
+  <!-- WORDMARK: one text element, three tspans with natural flow -->
+  <text x="160" y="100"
+        font-family="Poppins, sans-serif"
+        font-size="52"
+        letter-spacing="-1"
+        fill="#0B1F4D">
+    <tspan font-weight="500">Distance</tspan><tspan font-weight="700" fill="#E8930E" dx="14">MBA</tspan><tspan font-weight="500" fill="#0B1F4D" dx="14">College</tspan>
+  </text>
+</svg>
